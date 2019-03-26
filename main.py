@@ -13,8 +13,9 @@ import os
 
 app = Flask(__name__)
 
-# 環境変数取得
+# LINE Access Token
 YOUR_CHANNEL_ACCESS_TOKEN = os.environ["YOUR_CHANNEL_ACCESS_TOKEN"]
+# LINE Channel Secret
 YOUR_CHANNEL_SECRET = os.environ["YOUR_CHANNEL_SECRET"]
 
 line_bot_api = LineBotApi(YOUR_CHANNEL_ACCESS_TOKEN)
@@ -48,5 +49,5 @@ def handle_message(event):
 
 if __name__ == "__main__":
     #    app.run()
-    port = int(os.getenv("PORT", 5000))
+    port = int(os.getenv("PORT"))
     app.run(host="0.0.0.0", port=port)
