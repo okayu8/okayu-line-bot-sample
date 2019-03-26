@@ -27,7 +27,7 @@ def callback():
     # get X-Line-Signature header value
     # ここに問題ありそう
     #signature = request.headers['X-Line-Signature']
-    signature = request.headers['HTTP_X_LINE_SIGNATURE']
+    signature = request.header['HTTP_X_LINE_SIGNATURE']
 
     # get request body as text
     body = request.get_data(as_text=True)
