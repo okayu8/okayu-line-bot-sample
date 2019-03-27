@@ -42,12 +42,16 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    if event.message.text == 'fuck':
+    you = ['fuck', 'thank', 'kill']
+    shit = ['holy', 'bull']
+
+    if event.message.text in you:
         text = 'you!'
-    elif event.message.text == 'holy':
+    elif event.message.text in shit:
         text = 'shit!'
     else:
         text = event.message.text
+
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text))
