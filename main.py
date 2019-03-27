@@ -44,7 +44,7 @@ def callback():
 def handle_message(event):
     you = ['fuck', 'thank', 'kill', 'nice to meet']
     shit = ['holy', 'bull', 'oh']
-    circle　= ['円周率', 'えんしゅうりつ', 'エンシュウリツ', 'π']
+    circle = ['円周率', 'えんしゅうりつ', 'エンシュウリツ', 'π']
 
     if event.message.text in you:
         text = 'you!'
