@@ -47,7 +47,8 @@ def handle_message(event):
     shit = ['holy', 'bull', 'oh']
     circle = ['円周率', 'えんしゅうりつ', 'エンシュウリツ', 'π']
     michael = 'マイケル'
-    under_michael = ['ジャクソン', 'ジョーダン', 'サンデス', '1枚、2枚、３マイケル']
+    under_michael = ['ジャクソン', 'ジョーダン', 'サンデル',
+                     'シェンカー', 'オーウェン', '富岡', '1枚、2枚、３マイケル']
 
     if event.message.text in you:
         text = 'you!'
