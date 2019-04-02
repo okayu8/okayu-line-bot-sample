@@ -67,6 +67,8 @@ def handle_message(event):
         text = '低すぎ'
     elif event_text in keiba:
         text = str(random.choice(keiba_kekka)) + '番の馬が一着です。'
+    elif event_text[len(event.text)] = '?'
+    text = 'すみません。わかりません。'
     else:
         text = event.message.text
 
