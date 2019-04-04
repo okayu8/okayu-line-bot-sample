@@ -52,7 +52,6 @@ def handle_message(event):
     nenshu = '私の年収'
     keiba = '競馬予想'
     keiba_kekka = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-    commic = '%s漫画%s'
     reply_commic = ['うしおととら', 'からくりサーカス', 'エルフェンリート',
                     '最終兵器彼女', 'ジョジョの二部', 'GANTZ', 'バジリスク']
 
@@ -70,7 +69,7 @@ def handle_message(event):
         text = '低すぎ'
     elif event_text in keiba:
         text = str(random.choice(keiba_kekka)) + '番の馬が一着です。'
-    elif event_text in commic:
+    elif event_text.find('漫画') | | event_text.find('マンガ'):
         text = 'おすすめの漫画は ' + random.choice(reply_commic) + ' です。'
     elif list(event_text)[-1] in ['?', '？']:
         text = 'すみません。よくわかりません。'
