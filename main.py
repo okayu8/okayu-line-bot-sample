@@ -70,8 +70,8 @@ def handle_message(event):
         text = '低すぎ'
     elif event_text in keiba:
         text = str(random.choice(keiba_kekka)) + '番の馬が一着です。'
-    elif event_text in commic
-    text = 'おすすめの漫画は ' + random.chois(reply_commic) + ' です。'
+    elif event_text in commic:
+        text = 'おすすめの漫画は ' + random.choice(reply_commic) + ' です。'
     elif list(event_text)[-1] in ['?', '？']:
         text = 'すみません。よくわかりません。'
     else:
