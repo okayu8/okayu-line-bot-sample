@@ -54,6 +54,7 @@ def handle_message(event):
     keiba_kekka = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
     reply_commic = ['うしおととら', 'からくりサーカス', 'エルフェンリート',
                     '最終兵器彼女', 'ジョジョの二部', 'GANTZ', 'バジリスク']
+    reply_movie = ['メメント', 'ファイトクラブ', 'ハングオーバー', 'ララランド', 'デッドプール', 'SEVEN']
 
     event_text = event.message.text
 
@@ -71,6 +72,8 @@ def handle_message(event):
         text = str(random.choice(keiba_kekka)) + '番の馬が一着です。'
     elif 0 <= event_text.find('漫画') or 0 <= event_text.find('マンガ'):
         text = 'おすすめの漫画は ' + random.choice(reply_commic) + ' です。'
+        elif 0 <= event_text.find('映画')
+        text = 'おすすめの映画は ' + random.choice(reply_movie) + ' です。'
     elif list(event_text)[-1] in ['?', '？']:
         text = 'すみません。よくわかりません。'
     else:
