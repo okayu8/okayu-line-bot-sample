@@ -72,7 +72,7 @@ def handle_message(event):
         text = str(random.choice(keiba_kekka)) + '番の馬が一着です。'
     elif 0 <= event_text.find('漫画') or 0 <= event_text.find('マンガ'):
         text = 'おすすめの漫画は ' + random.choice(reply_commic) + ' です。'
-        elif 0 <= event_text.find('映画')
+    elif 0 <= event_text.find('映画'):
         text = 'おすすめの映画は ' + random.choice(reply_movie) + ' です。'
     elif list(event_text)[-1] in ['?', '？']:
         text = 'すみません。よくわかりません。'
